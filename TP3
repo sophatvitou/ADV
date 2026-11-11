@@ -1,0 +1,24 @@
+1. Hugging Face
+Hugging Face is an AI platform and community that provides tools, libraries, pretrained models, and datasets for machine learning and Natural Language Processing (NLP). 
+It allows developers and researchers to find, download, use, and train AI models. Its main tools include Transformers for loading pretrained models, Datasets for managing 
+datasets, and Tokenizers for converting text into tokens. It also provides a platform called Spaces for sharing and demonstrating AI applications.
+2. Unsloth
+Unsloth is a library designed to make Large Language Model (LLM) fine-tuning faster and more memory-efficient. It helps reduce GPU memory consumption and training time while 
+supporting techniques such as LoRA and QLoRA. It is useful when working with limited computing resources and integrates with the Hugging Face ecosystem.
+3. LLM Model Fine-Tuning
+3.1 Fine-Tuning (Page 4)
+Fine-tuning is a technique used to adapt a pretrained model to a specific task by continuing its training on a smaller, task-specific dataset. Instead of training 
+a model from scratch, we use the knowledge it has already learned and adjust its parameters to improve performance on the new task.
+3.2 Model & Preprocessor Setup
+A. Model Selection 
+Model selection is the process of choosing an appropriate pretrained model for a particular task. The selected model will be used as the starting point for fine-tuning.
+B. Model Loader (Pages 7–10)
+A model loader is a utility or function that loads a pretrained model, its architecture, and its weights into memory for inference or further training (fine-tuning).
+
+There are two main types of model loaders in Hugging Face Transformers:
+
+1. Model-Specific Loaders: These loaders are designed for a particular model architecture. They are used when we already know which model we want to load, such as BERT, GPT-2, or T5. 
+Examples include BertForSequenceClassification, GPT2LMHeadModel, and T5ForConditionalGeneration.
+
+2. AutoModel Loaders: These loaders automatically select the correct model architecture based on the model identifier provided. They make loading models easier 
+because we do not need to specify the architecture manually. Examples include AutoModelForSequenceClassification, AutoModelForTokenClassification, and AutoModelForCausalLM.
